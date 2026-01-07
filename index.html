@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heap Sort Visualization</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Heap Sort Visualization</h1>
+  <p class="sub">
+    Heap Sort builds a max heap and repeatedly extracts the maximum element.
+  </p>
+</header>
+
+<section class="controls">
+  <div class="group">
+    <button id="generateBtn">Generate Array</button>
+    <button id="sortBtn">Start Heap Sort</button>
+    <button id="pauseBtn" class="secondary" disabled>Pause</button>
+    <button id="stopBtn" class="danger" disabled>Stop</button>
+  </div>
+
+  <div class="group">
+    <label>Size:
+      <input type="range" id="sizeSlider" min="10" max="80" value="35">
+      <span id="sizeLabel" class="mono">35</span>
+    </label>
+
+    <label>Speed (ms):
+      <input type="range" id="speedSlider" min="20" max="400" value="120">
+      <span id="speedLabel" class="mono">120</span>
+    </label>
+  </div>
+</section>
+
+<main>
+  <div id="arrayContainer" class="array-container"></div>
+</main>
+
+<footer>
+  <span class="legend normal">Normal</span>
+  <span class="legend compare">Compare</span>
+  <span class="legend swap">Swap</span>
+  <span class="legend sorted">Sorted</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
