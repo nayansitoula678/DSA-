@@ -1,0 +1,121 @@
+:root{
+  --bg:#0f0f14;
+  --panel:#151522;
+  --border:#2a2a40;
+  --text:#fff;
+  --muted:#b9b9c7;
+  --accent:#3a86ff;
+  --danger:#ff4d4d;
+
+  --bar:#cfcfd6;
+  --compare:#ff4d4d;
+  --swap:#ffd166;
+  --sorted:#4cd137;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+header{
+  text-align:center;
+  padding:18px;
+}
+
+.sub{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.controls{
+  width:92%;
+  max-width:1000px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.group{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+button{
+  padding:10px 14px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  background:var(--accent);
+  color:#fff;
+}
+button:disabled{ opacity:0.6; }
+
+.secondary{ background:#2f2f46; }
+.danger{ background:var(--danger); }
+
+label{
+  font-size:14px;
+  color:var(--muted);
+}
+
+.mono{
+  font-family: monospace;
+}
+
+.array-container{
+  width:92%;
+  max-width:1000px;
+  height:420px;
+  margin:14px 0;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:12px;
+  display:flex;
+  align-items:flex-end;
+  gap:3px;
+  padding:12px;
+}
+
+.bar{
+  flex:1;
+  background:var(--bar);
+  border-radius:6px;
+  transition:height 0.2s, background-color 0.2s;
+}
+
+.bar.compare{ background:var(--compare); }
+.bar.swap{ background:var(--swap); }
+.bar.sorted{ background:var(--sorted); }
+
+footer{
+  display:flex;
+  gap:10px;
+  color:var(--muted);
+  padding-bottom:20px;
+}
+
+.legend{
+  padding:6px 10px;
+  border-radius:20px;
+  border:1px solid var(--border);
+  font-size:12px;
+}
+.legend.normal{ background:#0e0e16; }
+.legend.compare{ background:rgba(255,77,77,0.2); }
+.legend.swap{ background:rgba(255,209,102,0.2); }
+.legend.sorted{ background:rgba(76,209,55,0.2); }
